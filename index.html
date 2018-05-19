@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>慢慢买</title>
+  <script src="lib/lib-flexible/flexible.js"></script>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!--头部-->
+<div class="header">
+  <div class="logo fl">
+    <a href="#"><img src="images/header_logo.png" alt=""></a>
+  </div>
+  <div class="download fr">
+    <a href="#"><img src="images/header_app.png" alt=""></a>
+  </div>
+</div>
+
+<!--搜索框-->
+<div class="search">
+  <input type="search" placeholder="请输入您想比价的商品名">
+  <button>搜索</button>
+</div>
+
+<!--导航-->
+<div class="nav">
+  <ul class="clearfix">
+   
+   <!--导航模板引擎-->
+   
+  </ul>
+</div>
+
+<!--超值折扣小标题-->
+<div class="title">
+    超值折扣推荐
+    <a href="#"><img src="images/more.png" alt=""></a>
+  </div>
+
+<!--超值折扣推荐-->
+<div class="salepro">
+  <!--超值折扣模板-->
+  <ul>
+  
+  </ul>
+</div>
+
+<!--更多优惠信息-->
+<div class="moresale">
+  <a href="moneyctrl.html"><button>更多优惠信息 >></button></a>
+</div>
+
+<!--品牌排行小标题-->
+<div class="title">
+  品牌排行
+  <a href="#"><img src="images/more.png" alt=""></a>
+</div>
+
+<!--底部-->
+<div class="footer">
+  <div class="user clearfix">
+    <a href="#">登录</a>
+    <a href="#">注册</a>
+    <a href="#" class="returnTop fr"><img src="images/top.jpg" alt="">返回顶部</a>
+  </div>
+  <div class="mlink">
+    <p class="clearfix">
+      <a href="#">手机APP下载</a>
+      <a href="#">慢慢买手机版</a>
+      <a href="#">--掌上比价平台</a>
+    </p>
+    <p><a href="#">m.manmanbuy.com</a></p>
+  </div>
+</div>
+
+<!--导航模板引擎-->
+<script type="text/html" id="navTpl">
+ {{ each result v i }}
+ <li>
+   <a href="{{ v.titlehref }}">
+     {{# v.img }}
+     <p>{{ v.name }}</p>
+   </a>
+ </li>
+  {{ /each }}
+</script>
+
+<!--超值折扣推荐-->
+<script type="text/html" id="saleproTpl">
+  {{ each result v i }}
+  <li>
+    <a href="moneyproduct.html?productid={{v.productId}}" class="clearfix">
+      <div class="proimg fl">
+        {{# v.productImg2 }}
+      </div>
+      <div class="proinfo">
+        <p>{{ v.productName }} <span>{{ v.productPinkage}}</span> </p>
+        <div class="otherinfo clearfix">
+          <span class="time fl">{{ v.productFrom }}|{{ v.productTime}}</span>
+          <span class="comment fr">
+              <i class="icon-comment"></i>
+              {{ v.productComCount }}
+            </span>
+        </div>
+      </div>
+    </a>
+  </li>
+  {{ /each }}
+</script>
+
+
+
+<script src="lib/jquery/jquery-1.12.4.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/common.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

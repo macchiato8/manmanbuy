@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>全部分类</title>
+  <script src="lib/lib-flexible/flexible.js"></script>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+<!--头部-->
+<div class="header">
+  <div class="logo fl">
+    <a href="#"><img src="images/header_logo.png" alt=""></a>
+  </div>
+  <div class="download fr">
+    <a href="#"><img src="images/header_app.png" alt=""></a>
+  </div>
+</div>
+
+<!--搜索框-->
+<div class="search">
+  <input type="search" placeholder="请输入您想比价的商品名">
+  <button>搜索</button>
+</div>
+
+<!--商品详情公共导航条-->
+<div class="mdaohang">
+  <ul>
+    <a href="index.html">首页 > </a>
+    <a href="moneyctrl.html">全部分类 > </a>
+    <a class="goto" href="javascript:;"></a>
+  </ul>
+</div>
+
+<!--商品列表-->
+<div class="prolistinfo">
+  <!--超值折扣模板-->
+  <ul>
+  
+  </ul>
+</div>
+
+<!--分页标签-->
+<div class="pagecate">
+  <button class="flexbox prepage">上一页</button>
+  <div class="flexbox pagelist">
+    <select id="status">
+      <!--<option value="1">  1 / 15  </option>-->
+    </select>
+  </div>
+  <button class="flexbox nextpage">下一页</button>
+
+</div>
+
+<!--底部-->
+<div class="footer">
+  <div class="user clearfix">
+    <a href="#">登录</a>
+    <a href="#">注册</a>
+    <a href="#" class="returnTop fr"><img src="images/top.jpg" alt="">返回顶部</a>
+  </div>
+  <div class="mlink">
+    <p class="clearfix">
+      <a href="#">手机APP下载</a>
+      <a href="#">慢慢买手机版</a>
+      <a href="#">--掌上比价平台</a>
+    </p>
+    <p><a href="#">m.manmanbuy.com</a></p>
+  </div>
+</div>
+
+<!--超值折扣推荐-->
+<script type="text/html" id="productlistTpl">
+  {{ each result v i }}
+  <li style="border:0;">
+    <a href="moneyproduct.html?productid={{ v.productId }}" class="clearfix">
+      <div class="proimg fl">
+        {{# v.productImg }}
+      </div>
+      <div class="proinfo">
+        <div class="titlesm">{{ v.productName }} </div><span>{{ v.productPrice}}</span>
+        <div class="otherinfo clearfix">
+          <span class="pricenum fl">{{ v.productQuote }}</span>
+          <span class="comment fr">
+              <i class="icon-comment"></i>
+              {{ v.productCom}}
+            </span>
+        </div>
+      </div>
+    </a>
+  </li>
+  {{ /each }}
+</script>
+
+<script src="lib/jquery/jquery-1.12.4.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/common.js"></script>
+<script src="js/productlist.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>国内折扣</title>
+  <script src="lib/lib-flexible/flexible.js"></script>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+<!--部分分页公共头部-->
+<div class="m_header">
+  <div class="leftarrow fl">
+    <a href="#"><img src="images/icback.svg" alt=""></a>
+  </div>
+  <h4>国内折扣</h4>
+  <div class="download fr">
+    <a href="#"><img src="images/header_app.png" alt=""></a>
+  </div>
+</div>
+
+<!--商品信息详情-->
+<div class="productinfobox">
+  
+  <!--模版引擎-->
+  
+</div>
+
+<!--商品详情公共导航条-->
+<div class="mdaohang">
+  <ul>
+    <a href="index.html">首页 > </a>
+    <a href="moneyctrl.html">超值推荐 > </a>
+    <a class="goto" href="javascript:;"></a>
+  </ul>
+</div>
+
+<!--导航-->
+<div class=""></div>
+
+<!--底部-->
+<div class="footer">
+  <div class="user clearfix">
+    <a href="#">登录</a>
+    <a href="#">注册</a>
+    <a href="#" class="returnTop fr"><img src="images/top.jpg" alt="">返回顶部</a>
+  </div>
+  <div class="mlink">
+    <p class="clearfix">
+      <a href="#">手机APP下载</a>
+      <a href="#">慢慢买手机版</a>
+      <a href="#">--掌上比价平台</a>
+    </p>
+    <p><a href="#">m.manmanbuy.com</a></p>
+  </div>
+</div>
+
+
+<script type="text/html" id="moneyproductTpl">
+  {{ if result }}
+  {{ each result v i }}
+  <h3>{{ v.productName }}</h3>
+  <p class="price"> {{ v.productPinkage }}</p>
+  <div class="infos">
+    <span> {{ v.productFrom }}</span>
+    <span> {{ v.productTime }}</span>
+    <span> {{ v.productTips }}</span>
+    <a href="#">{{ v.productComCount}}</a>
+  </div>
+  
+  <div class="prowords clearfix">
+    <div class="smallpic fr">{{# v.productImgSm }}</div>
+    <div class="morewords">{{ v.productInfo }}</div>
+    <div class="largepic">{{# v.productImgLg }}</div>
+  </div>
+  
+  {{ if v.productCity }}
+  <div class="city">
+    {{# v.productCity }}
+  </div>
+  {{ /if }}
+  <div class="gobuy">
+    <a href="#">前往购买</a>
+  </div>
+  
+  <div class="comment">
+    {{# v.productComment }}
+  </div>
+
+{{ /each }}
+  {{ /if }}
+</script>
+
+<script src="lib/jquery/jquery-1.12.4.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/common.js"></script>
+<script src="js/moneyproduct.js"></script>
+</body>
+</html>

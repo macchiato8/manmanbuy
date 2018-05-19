@@ -1,0 +1,177 @@
+@import "base";
+@import "variable";
+
+.font_dpr(@font-size: 16px) {
+  font-size: @font-size;
+
+  [data-dpr="2"] & {
+    font-size: @font-size * 2;
+  }
+  [data-dpr="3"] & {
+    font-size: @font-size * 3;
+  }
+}
+
+//公共类名
+.item {
+  display: none;
+}
+.itemdis {
+  display: block;
+}
+
+//部分头部
+.header {
+  width: 100%;
+  height: 100rem / @base;
+  background-color: @buyColor;
+
+  .logo {
+    height: 100%;
+    padding: 25rem / @base;
+
+    img {
+      width: 371rem / @base;
+      height: 50rem / @base;
+    }
+  }
+
+  .download {
+    height: 100%;
+    padding: 16rem / @base;
+
+    img {
+      width: 68rem / @base;
+      height: 68rem / @base;
+    }
+  }
+
+}
+
+
+//部分分页公共头部
+.m_header {
+  width: 100%;
+  height: 100rem / @base;
+  line-height: 100rem / @base;
+  background-color: @buyColor;
+  text-align: center;
+
+
+  .leftarrow {
+    padding: 30rem/@base 20rem/@base;
+
+    a {
+      display: block;
+      img {
+        width: 35rem/@base;
+        height: 35rem/@base;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  h4 {
+    display: inline-block;
+    .font_dpr(16px);
+    color: #ffffff;
+  }
+
+  .download {
+    padding: 15rem/@base;
+    img {
+      width: 65rem/@base;
+      height: 65rem/@base;
+    }
+  }
+}
+
+
+//搜索框
+.search {
+  width: 100%;
+  height: 100rem / @base;
+  padding-left: 22rem / @base;
+  padding-top: 22rem / @base;
+  padding-bottom: 22rem / @base;
+  padding-right: 175rem / @base;
+  border-bottom: 2rem/@base solid #ccc;
+  background-color: #fff;
+  position: relative;
+
+  input {
+    width: 100%;
+    height: 54rem/@base;
+    border-radius: 40rem / @base;
+    padding-left: 30rem / @base;
+    background-color: #F1F1F1;
+
+  }
+
+  button {
+    border: 0;
+    border-radius: 40rem / @base;
+    width: 125rem / @base;
+    height: 54rem/@base;
+    background-color: @buyColor;
+    position: absolute;
+    right: 22rem/ @base;
+    top: 22rem/ @base;
+    color: #ffffff;
+  }
+}
+
+
+//公共底部
+.footer {
+  width: 100%;
+  height: 190rem / @base;
+
+  .user {
+    border-top: 1rem / @base solid #ccc;
+    border-bottom: 1rem / @base solid #ccc;
+
+    a {
+      float: left;
+      width: 30%;
+      height: 68rem / @base;
+      line-height: 68rem / @base;
+      text-align: center;
+      border-right: 1rem / @base solid #ccc;
+    }
+
+    .returnTop {
+      width: 40%;
+      border-right: none;
+      vertical-align: middle;
+
+      img {
+        display: inline-block;
+        width: 30rem / @base;
+        height: 30rem / @base;
+      }
+    }
+  }
+
+  .mlink {
+    padding-top: 35rem / @base;
+
+    p {
+      height: 30rem / @base;
+      text-align: center;
+
+      a:first-child {
+        color: #fa485c;
+      }
+    }
+
+    p:last-child {
+      a {
+        color: #000;
+      }
+    }
+  }
+}
+
+
+

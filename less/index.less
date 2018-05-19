@@ -1,0 +1,487 @@
+@import "common";
+//---------首页sart--------
+//导航
+.nav {
+  //height: 350rem/ @base;
+  background-color: #F7F7F7;
+
+  ul {
+    padding-top: 20rem/@base;
+    li {
+      float: left;
+      width: 25%;
+
+      a {
+        display: block;
+        padding: 20rem/@base;
+      }
+
+      img {
+        width: 100rem / @base;
+        height: 100rem / @base;
+        margin: 0 auto;
+      }
+      p {
+        height: 32rem / @base;
+        line-height: 32rem / @base;
+        text-align: center;
+        .font_dpr(16px);
+      }
+    }
+  }
+}
+
+//公共小标题
+.title {
+    text-indent: 20rem/@base;
+    height: 70rem / @base;
+    line-height: 70rem / @base;
+    background-color: #ff9000;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffaf47), to(#ff9000));
+    position: relative;
+    .font_dpr(18px);
+    color: #fff;
+
+    a {
+      display: block;
+      width: 40rem / @base;
+      height: 40rem / @base;
+      position: absolute;
+      top: 50%;
+      margin-top: -20rem/@base;
+      right: 20rem / @base;
+    }
+
+    img {
+      width: 40rem / @base;
+      height: 40rem / @base;
+    }
+  }
+
+//超值折扣推荐&省钱控页面
+.salepro {
+  width: 100%;
+  background-color: #fff;
+
+  li {
+    width: 100%;
+    //height: 260rem / @base;
+    padding: 30rem/@base 20rem/@base;
+    border-bottom: 1rem/@base solid #ccc;
+
+    a {
+      display: block;
+    }
+    .proimg {
+      //width: 260rem/@base;
+      //height: 100%
+      margin-right: 20rem/@base;
+    }
+    img {
+      width: 200rem/@base;
+      height: 200rem/@base;
+      //height: 100%;
+    }
+    .proinfo {
+      //width: 70%;
+      //height: 100%;
+      overflow: hidden;
+    }
+    p {
+      height: 150rem / @base;
+      .font_dpr(16px);
+      span {
+        color: @buyColor;
+      }
+    }
+    .otherinfo {
+      .icon-comment{
+          width: 0.4rem;
+          height: 0.4rem;
+          display: inline-block;
+          background: url('../images/comment.svg') no-repeat center;
+          background-size: 100%;
+          vertical-align: middle;
+          margin-right:  4rem/@base;
+      }
+      span {
+        .font_dpr(12px);
+        color: #ccc;
+      }
+    }
+  }
+}
+
+//更多优惠信息
+.moresale {
+  height: 105rem / @base;
+  background-color: #fff;
+  padding: 20rem / @base;
+
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  button {
+    border: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10rem/@base;
+    background-color: #F1F1F1;
+    border: 1rem/@base solid #ccc;
+    .font_dpr(16px);
+  }
+}
+//---------首页end---------
+
+
+
+//--------省钱控start--------
+//省钱控分页标签
+.pagecate {
+  width: 100%;
+  height: 150rem/@base;
+  display: flex;
+  padding: 40rem/@base 20rem/@base;
+  background-color: #fff;
+
+  .flexbox {
+    flex: 1;
+    margin:  0 10rem/@base;
+  }
+  button {
+    border: 0;
+    border-radius: 10rem/@base;
+    .font_dpr(18px);
+    border: 1px solid #ccc;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#F1F1F1), to(#CCC));
+  }
+  .pagelist {
+    margin: 0 15rem/@base;
+    border: 1px solid #000;
+  }
+  select {
+    display: block;
+    width: 100%;
+    height: 100%;
+    .font_dpr(16px);
+  }
+}
+
+//商品信息详情
+.productinfobox {
+  padding: 20rem/@base;
+  width: 100%;
+  background-color: #fff;
+
+  h3 {
+    .font_dpr(16px);
+  }
+
+  .price {
+    color:red;
+  }
+
+  .infos {
+    padding: 20rem/@base 0;
+
+    span {
+      padding: 0 10rem/@base;
+    }
+  }
+
+  .prowords {
+    overflow: hidden;
+
+    .morewords {
+      color:#606060;
+      .font_dpr(14px);
+    }
+
+    img {
+      border: 0;
+      display: inline-block;
+    }
+
+    .smallpic {
+      width: 240rem/@base;
+      height: 240rem/@base;
+    }
+
+    .largepic {
+      text-align: center;
+      margin-top: 10rem/@base;
+      img {
+        //max-width: 100%;
+        width: 400rem/@base;
+        height: 400rem/@base;
+        margin: 10rem/@base auto;
+      }
+    }
+  }
+
+  //选择城市有无货
+  .city {
+    text-align: center;
+    margin-top: 30rem/@base;
+
+    ul {
+      display: inline-block;
+      border-radius: 4rem/@base;
+      box-shadow: 2rem/@base 2rem/@base 2rem/@base 2rem/@base rgba(0,0,0,.2);
+
+      li {
+        line-height: 76rem/@base;
+        border-bottom: 1rem/@base dashed #ccc;
+        a {
+          display: block;
+          padding: 0 20rem/@base;
+        }
+        span {
+          padding: 0 20rem/@base;
+        }
+        strong {
+          float: right;
+          margin-left: 40rem/@base;
+          padding: 0 20rem/@base;
+          color: @buyColor;
+        }
+      }
+      li:nth-last-child(1) {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .gobuy {
+    width: 100%;
+    height: 125rem/@base;
+    padding: 20rem/@base 40rem/@base;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      line-height: 85rem/@base;
+      background-color: #FF9000;
+      border-radius: 10rem/@base;
+      color: #fff;
+      text-align: center;
+      .font_dpr(16px)
+    }
+  }
+
+  //评论
+  .comment {
+
+    .form {
+      width: 100%;
+      border: 1px solid #eceae8;
+      border-radius: 10rem/@base;
+      padding-top: 5rem/@base;
+      padding-left: 5rem/@base ;
+      textarea {
+        border: none;
+        height: 100rem/@base;
+        line-height: 10rem/@base;
+      }
+      .ctrl {
+        background: #fbfbfb;
+        height: 50rem/@base;
+        margin-left: 10rem/@base;
+        position: relative;
+      }
+      input {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: @buyColor;
+        border: 2px solid @buyColor;
+        width: 180rem/@base;
+        height: 60rem/@base;
+        border-radius: 5rem/@base;
+        color: #fff;
+        font-size: 14px;
+      }
+    }
+
+    .tit {
+      line-height: 50rem/@base;
+      padding: 20rem/@base 0;
+      .font_dpr(14px);
+      font-weight: bold;
+    }
+    .list {
+      ul {
+        li {
+          padding: 20rem/@base 0 ;
+
+
+          .userimg {
+            width:72rem/@base;
+            height:72rem/@base;
+            overflow: hidden;
+            float: left;
+            border-radius: 50%;
+          }
+          .con {
+            overflow: hidden;
+            .font_dpr(14px);
+            padding-left: 20rem/@base;
+          }
+          .name {
+            padding-bottom: 20rem/@base;
+          }
+          .username {
+            float: left;
+            color: #59A4D2;
+          }
+          .time {
+            float: right;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+
+
+}
+
+//省钱控商品详情公共导航条
+.mdaohang {
+  height: 80rem/@base;
+  width: 100%;
+  padding: 0 30rem/@base;
+  background-color: #5a5a5a;
+  overflow: hidden;
+  a {
+    display: inline-block;
+    line-height: 80rem/@base;
+    .font_dpr(16px);
+    color: #fff;
+    vertical-align: middle;
+    overflow: hidden;
+    padding: 0 5rem/@base;
+  }
+}
+//--------省钱控end----------
+
+
+//---------比价搜索start-------
+//菜单栏下拉列表
+.category {
+  padding: 10rem/@base;
+  background-color: #fff;
+
+  li {
+    width: 100%;
+    background-color: #F1F1F1;
+
+
+    .mtitle {
+      height: 80rem / @base ;
+      line-height: 80rem / @base;
+      .font_dpr(16px);
+      text-indent: 30rem/@base;
+      font-weight: bold;
+      border-bottom: 1rem/@base solid #cccccc;
+
+      img {
+        display: inline-block;
+        width: 48rem / @base;
+        height: 48rem / @base;
+        float: right;
+        margin-top: 16rem/@base;
+        margin-right: 15rem/@base;
+
+
+      }
+    }
+
+    .hidelist {
+      background-color: #fff;
+      li {
+        width: 100/3%;
+        height: 80rem / @base;
+        line-height: 80rem / @base;
+        background-color: #fff;
+        border-left: 1rem/@base solid #ccc;
+        border-bottom: 1rem/@base solid #ccc;
+        float: left;
+      }
+      li:nth-child(3n) {
+        border-right: 1rem/@base solid #ccc;
+      }
+      li:nth-last-child(1) {
+        border-right: 1rem/@base solid #ccc;
+      }
+      li:nth-last-child(1) {
+        border-right: 1rem/@base solid #ccc;
+      }
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        line-height: 80rem / @base ;
+        text-align: center;
+      }
+
+    }
+  }
+}
+
+//商品列表
+//超值折扣推荐&省钱控页面
+.prolistinfo {
+  width: 100%;
+  background-color: #fff;
+
+  li {
+    width: 100%;
+    padding: 30rem/@base 20rem/@base;
+    border-bottom: 1rem/@base solid #ccc;
+
+    a {
+      display: block;
+    }
+    .proimg {
+      margin-right: 20rem/@base;
+    }
+    img {
+      width: 200rem/@base;
+      height: 200rem/@base;
+    }
+    .proinfo {
+      overflow: hidden;
+
+      .titlesm{
+      .font_dpr(16px);
+        height: 50rem / @base;
+        margin-bottom: 20rem/@base;
+      }
+      span {
+        color: red;
+      }
+    }
+    .otherinfo {
+      margin-top: 20rem/@base;
+      .icon-comment{
+        width: 0.4rem;
+        height: 0.4rem;
+        display: inline-block;
+        background: url('../images/comment.svg') no-repeat center;
+        background-size: 100%;
+        vertical-align: middle;
+        margin-right:  4rem/@base;
+      }
+      span {
+        .font_dpr(12px);
+        color: #ccc;
+      }
+    }
+  }
+}
+//---------比价搜索end-------
