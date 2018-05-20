@@ -28,7 +28,7 @@
 <div class="mdaohang">
   <ul>
     <a href="index.html">首页 > </a>
-    <a href="moneyctrl.html">全部分类 > </a>
+    <a href="category.html">全部分类 > </a>
     <a class="goto" href="javascript:;"></a>
   </ul>
 </div>
@@ -74,7 +74,7 @@
 <script type="text/html" id="productlistTpl">
   {{ each result v i }}
   <li style="border:0;">
-    <a href="moneyproduct.html?productid={{ v.productId }}" class="clearfix">
+    <a href="compareprice.html?productid={{ v.productId }}" class="clearfix">
       <div class="proimg fl">
         {{# v.productImg }}
       </div>
@@ -84,7 +84,7 @@
           <span class="pricenum fl">{{ v.productQuote }}</span>
           <span class="comment fr">
               <i class="icon-comment"></i>
-              {{ v.productCom}}
+              {{ v.productCom }}
             </span>
         </div>
       </div>

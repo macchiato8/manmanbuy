@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>国内折扣</title>
+  <title>国内折扣商品</title>
   <script src="lib/lib-flexible/flexible.js"></script>
   <link rel="stylesheet" href="css/index.css">
 </head>
@@ -19,27 +19,51 @@
   </div>
 </div>
 
-
-<!--滚动页面折扣列表-->
-<div class="m_discount">
-  <ul class="clearfix">
+<!--商品信息详情-->
+<div class="inlanddetailbox">
   
-  </ul>
+  <!--模版引擎-->
+
 </div>
 
-<!--模版引擎-->
-<script type="text/html" id="discountproTpl">
-  {{each result v i}}
-  <li>
-    <a href="inlanddetail.html?productid={{v.productId}}">
-      {{# v.productImg}}
-      <p class="pro_title txt-cut">{{v.productName}}</p>
-      <p class="price one-txt-cut">{{v.productPrice}}</p>
-      <p class="time"><span>{{v.productFrom}}</span> | <span>{{v.productTime}}</span></p>
-    </a>
-  </li>
-  {{/each}}
+<script type="text/html" id="inlanddetailTpl">
+  {{ if result }}
+  {{ each result v i }}
+  <h3>{{ v.productName }}</h3>
+  <p class="price"> {{ v.productPrice }}</p>
+  <div class="infos">
+    <span> {{ v.productFrom }}</span>
+    <span> {{ v.productTime }}</span>
+    <span> {{ v.productTips }}</span>
+  </div>
+  
+  <div class="prowords clearfix">
+    <div class="smallpic fr">{{# v.productImg }}</div>
+    <div class="morewords">{{ v.productInfo }}</div>
+    <div class="largepic">{{# v.productImg }}</div>
+  </div>
+  
+  {{ if v.productCity }}
+  <div class="city">
+    {{# v.productCity }}
+  </div>
+  {{ /if }}
+  <div class="gobuy">
+    <a href="#">前往购买</a>
+  </div>
+  
+  <div class="hugeimg">
+    <img src="images/mmbweixin2.png" alt="">
+  </div>
+  
+  <div class="comment">
+    {{# v.productComment }}
+  </div>
+  
+  {{ /each }}
+  {{ /if }}
 </script>
+
 
 
 
@@ -60,10 +84,9 @@
   </div>
 </div>
 
-
 <script src="lib/jquery/jquery-1.12.4.js"></script>
 <script src="lib/artTemplate/template-web.js"></script>
 <script src="js/common.js"></script>
-<script src="js/inlanddiscount.js"></script>
+<script src="js/inlanddetail.js"></script>
 </body>
 </html>

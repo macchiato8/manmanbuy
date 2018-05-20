@@ -1,5 +1,5 @@
 @import "common";
-//---------首页sart--------
+// 1---------首页sart--------
 //导航
 .nav {
   //height: 350rem/ @base;
@@ -137,7 +137,7 @@
 
 
 
-//--------省钱控start--------
+// 2--------省钱控start--------
 //省钱控分页标签
 .pagecate {
   width: 100%;
@@ -370,7 +370,7 @@
 //--------省钱控end----------
 
 
-//---------比价搜索start-------
+// 3---------比价搜索start-------
 //菜单栏下拉列表
 .category {
   padding: 10rem/@base;
@@ -484,4 +484,708 @@
     }
   }
 }
+
+
+//商品详情页面
+.prodetails {
+  width: 100%;
+  background-color: #fff;
+  padding: 15rem/@base;
+
+  .proImg {
+    padding: 15rem/@base;
+
+    img {
+      width: 400rem/@base;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .protitle {
+     color: #575757;
+     .font_dpr(16px);
+   }
+}
+
+//比价小导航条
+.comparenav {
+  width: 100%;
+  border-top: solid 1rem/@base #c14d00;
+  border-bottom: solid 1rem/@base #c14d00;
+
+  li {
+    width: 33.333%;
+    float: left;
+    text-align: center;
+    background-color: #fb0;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffd050), to(#ffbb00));
+    border-left: solid 1rem/@base #c14d00;
+
+    a {
+      display: block;
+      width: 100%;
+      line-height: 60rem/@base;
+      height: 60rem/@base;
+      color: #fff;
+      .font_dpr(14px);
+    }
+  }
+
+  .current {
+    background-color: #ffbb02;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffa632), to(#ff9000));
+  }
+
+  li:first-child {
+    border-left: 0;
+  }
+}
+
+//比价商城
+.bjshop {
+  background-color: #fff;
+  border-top: 1rem/@base solid #808080;
+  .font_dpr(12px);
+  color: #888888;
+  padding: 25rem/@base 30rem/@base;
+  line-height: 15rem/@base;
+  img {
+    width: 25rem/@base;
+    height: 25rem/@base;
+    vertical-align: middle;
+  }
+}
+
+//评价
+.compareCom {
+  background-color: #fff;
+  h3 {
+    color: #000;
+    background: #dbdbdb;
+    border-top: 1rem/@base solid #7a7a7a;
+    text-align: center;
+    .font_dpr(16px);
+    font-weight: bold;
+    line-height: 80rem/@base;
+    height: 80rem/@base;
+  }
+
+  ul {
+    padding: 10rem/ @base;
+    li {
+      padding: 30rem/@base 10rem/@base;
+      line-height: 50rem/@base;
+      border-bottom: 1rem/@base solid #ccc;
+      .info {
+        display: block;
+        overflow: hidden;
+        color: #999;
+        .font_dpr(14px);
+      }
+      span {
+        width: 50%;
+        line-height: 30rem/@base;
+      }
+      .date,
+      .from{
+        text-align: right;
+      }
+      .text {
+        padding-top: 15rem/@base;
+        .font_dpr(16px);
+        text-indent: 32rem/@base;
+      }
+    }
+  }
+}
 //---------比价搜索end-------
+
+
+// 4---------国内折扣start----------
+//滚动页面折扣列表
+.m_discount {
+  background-color: #fff;
+  li {
+    width: 50%;
+    float: left;
+    height: 590rem/@base;
+    text-align: center;
+    border-bottom: 1rem/@base solid #ccc;
+    padding: 30rem/@base;
+
+    &:nth-child(odd) {
+      border-right: 1rem/@base solid #ccc;
+    }
+
+    img {
+      width: 300rem/@base;
+      height: 300rem/@base;
+      margin: 0 auto 20rem/@base;
+    }
+
+    .pro_title {
+      .font_dpr(18px);
+      font-weight: bold;
+    }
+
+    .price {
+      color: #FF7E18;
+      .font_dpr();
+      font-weight: bold;
+      padding: 15rem/@base 0;
+    }
+
+    .time {
+      color: #B4B8D6;
+    }
+  }
+}
+
+//折扣商品详情页
+.inlanddetailbox {
+  padding: 20rem/@base;
+  width: 100%;
+  background-color: #fff;
+
+  h3 {
+    .font_dpr(20px);
+    font-weight: bold;
+  }
+
+  .price {
+    margin-top: 20rem/@base;
+    color:red;
+  }
+
+  .infos {
+    padding: 20rem/@base 0;
+
+    span {
+      padding: 0 10rem/@base;
+      color: #888888;
+    }
+  }
+
+  .prowords {
+    overflow: hidden;
+
+    .morewords {
+      color:#606060;
+      .font_dpr(14px);
+    }
+
+    img {
+      border: 0;
+      display: inline-block;
+    }
+
+    .smallpic {
+      width: 240rem/@base;
+      height: 240rem/@base;
+    }
+
+    .largepic {
+      text-align: center;
+      margin-top: 10rem/@base;
+      img {
+        //max-width: 100%;
+        width: 400rem/@base;
+        height: 400rem/@base;
+        margin: 10rem/@base auto;
+      }
+    }
+  }
+
+  //选择城市有无货
+  .city {
+    text-align: center;
+    margin-top: 30rem/@base;
+
+    ul {
+      display: inline-block;
+      border-radius: 4rem/@base;
+      box-shadow: 2rem/@base 2rem/@base 2rem/@base 2rem/@base rgba(0,0,0,.2);
+
+      li {
+        line-height: 76rem/@base;
+        border-bottom: 1rem/@base dashed #ccc;
+        a {
+          display: block;
+          padding: 0 20rem/@base;
+        }
+        span {
+          padding: 0 20rem/@base;
+        }
+        strong {
+          float: right;
+          margin-left: 40rem/@base;
+          padding: 0 20rem/@base;
+          color: @buyColor;
+        }
+      }
+      li:nth-last-child(1) {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .gobuy {
+    width: 100%;
+    height: 125rem/@base;
+    padding: 20rem/@base 40rem/@base;
+    margin: 40rem/@base 0;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      line-height: 85rem/@base;
+      background-color: #FF9000;
+      border-radius: 10rem/@base;
+      color: #fff;
+      text-align: center;
+      .font_dpr(16px)
+    }
+  }
+
+  .hugeimg {
+    padding: 0 15rem/@base;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+
+  //评论
+  .comment {
+
+    .form {
+      width: 100%;
+      border: 1px solid #eceae8;
+      border-radius: 10rem/@base;
+      padding-top: 5rem/@base;
+      padding-left: 5rem/@base ;
+      textarea {
+        border: none;
+        height: 100rem/@base;
+        line-height: 10rem/@base;
+      }
+      .ctrl {
+        background: #fbfbfb;
+        height: 50rem/@base;
+        margin-left: 10rem/@base;
+        position: relative;
+      }
+      input {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: @buyColor;
+        border: 2px solid @buyColor;
+        width: 180rem/@base;
+        height: 60rem/@base;
+        border-radius: 5rem/@base;
+        color: #fff;
+        font-size: 14px;
+      }
+    }
+
+    .tit {
+      line-height: 50rem/@base;
+      padding: 20rem/@base 0;
+      .font_dpr(14px);
+      font-weight: bold;
+    }
+    .list {
+      ul {
+        li {
+          padding: 20rem/@base 0 ;
+
+
+          .userimg {
+            width:72rem/@base;
+            height:72rem/@base;
+            overflow: hidden;
+            float: left;
+            border-radius: 50%;
+          }
+          .con {
+            overflow: hidden;
+            .font_dpr(14px);
+            padding-left: 20rem/@base;
+          }
+          .name {
+            padding-bottom: 20rem/@base;
+          }
+          .username {
+            float: left;
+            color: #59A4D2;
+          }
+          .time {
+            float: right;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+
+
+}
+//---------国内折扣end-----------
+
+
+// 5---------白菜价start----------
+.m_baicai {
+  background-color: #fff;
+  overflow: hidden;
+  .scrollnav {
+    width: 100%;
+    ul {
+      width: 2000rem/@base;
+      border-bottom: 6rem/@base solid #ccc;
+    }
+    li {
+      float: left;
+      a {
+        display: block;
+        height: 80rem/@base;
+        line-height: 80rem/@base;
+        padding: 0 25rem/@base;
+        .font_dpr(16px);
+        font-weight: bold;
+        border-bottom: 3rem/@base solid transparent;
+      }
+      a.current {
+        color: #E22F32;
+        border-bottom: 3rem/@base solid #E22F32;
+      }
+    }
+  }
+  .baiprolist {
+    li {
+      height: 340rem/@base;
+      padding: 20rem/@base;
+
+      .item_left {
+        float: left;
+        width: 260rem/@base;
+        height: 260rem/@base;
+
+        img {
+          width: 260rem/@base;
+          height: 260rem/@base;
+        }
+      }
+
+      .item_right {
+        padding-left: 20rem/@base;
+        overflow: hidden;
+        height: 100%;
+
+        h3 {
+          .font_dpr(16px);
+          font-weight: bold;
+        }
+
+        .price {
+          margin-top: 20rem/@base;
+          color: #F4483E;
+          .font_dpr(16px);
+          font-weight: bold;
+
+          i {
+            font-style: normal;
+            .font_dpr(14px);
+          }
+
+          del {
+            .font_dpr(12px);
+            color: #ccc;
+            margin-left: 20rem/@base;
+          }
+        }
+
+        .bar {
+          margin: 15rem/@base 0;
+          position: relative;
+
+          i{
+            display: block;
+            position: relative;
+            width: 160rem/@base;
+            height: 30rem/@base;
+            line-height: 30rem/@base;
+            border: 1rem/@base solid #FC353A;
+            background-color: pink;
+            text-align: center;
+            border-radius: 30rem/@base;
+
+            em {
+              display: block;
+              height: 100%;
+              background-color: #FC353A;
+              border-radius: 30rem/@base;
+            }
+            span {
+              position: absolute;
+              top: 0;
+              left: 60rem/@base;
+              .font_dpr(14px);
+              font-weight: bold;
+              color: #fff;
+            }
+          }
+
+          b {
+            position: absolute;
+            top: 0;
+            left: 200rem/@base;
+            .font_dpr();
+            height: 30rem/@base;
+            line-height: 30rem/@base;
+            color: #FC353A;
+          }
+        }
+        .seal {
+
+          a:first-child {
+            float: left;
+            height: 50rem/@base;
+            line-height: 50rem/@base;
+            .font_dpr(14px);
+            border: 1rem/@base dashed #FC353A;
+            color: #FC353A;
+            padding: 0 5rem/@base;
+          }
+
+          a:last-child {
+            float: right;
+            height: 50rem/@base;
+            line-height: 50rem/@base;
+            .font_dpr(14px);
+            color: #fff;
+            font-weight: bold;
+            background-color: #FF5E5D;
+            border-radius: 5rem/@base;
+            padding: 0 5rem/@base;
+          }
+        }
+      }
+    }
+  }
+}
+//---------白菜价end-----------
+
+
+// 6--------- 优惠券start -------
+//优惠券标题页
+.m_coupon {
+  background-color: #fff;
+  width: 100%;
+  ul {
+    padding: 30rem/@base 5rem/@base 0;
+    width: 100%;
+
+    li {
+    float: left;
+    width: 33.33%;
+    padding: 0 5rem/@base;
+    margin-bottom: 10rem/@base;
+
+      a {
+      display: block;
+      padding: 10rem/@base 0;
+      border: 1rem/@base solid #ccc;
+      }
+      .imgfont {
+      width: 100rem/@base;
+      height: 100rem/@base;
+      margin: 0 auto;
+      }
+      p {
+      text-align: center;
+      .font_dpr(16px);
+      font-weight: bold;
+      height: 30rem/@base;
+      line-height: 30rem/@base;
+      }
+    }
+
+  }
+}
+
+//优惠券详情页
+.m_couponproduct {
+
+  .coupontips {
+  .font_dpr(14px);
+  text-align: center;
+  color: #928B89;
+    margin: 20rem/@base;
+  }
+
+  li {
+    border-bottom: 1rem/@base solid #ccc;
+    margin-top :20rem/@base;
+    padding-bottom: 20rem/@base;
+
+    a {
+      padding: 20rem/@base;
+      display: block;
+
+      .isleft {
+        float: left;
+        padding-right: 20rem/@base;
+
+        img {
+          width: 200rem/@base;
+          height: 160rem/@base;
+        }
+      }
+
+      .isright {
+        overflow: hidden;
+        padding-right: 20rem/@base;
+
+        .coupontitle {
+          .font_dpr();
+          line-height: 40rem/@base;
+        }
+
+        .couponprice {
+          .font_dpr();
+          font-weight: bold;
+        }
+
+        .coupontime {
+          color: #EF7A02;
+          .font_dpr(14px);
+        }
+      }
+    }
+  }
+}
+// 6--------- 优惠券end --------
+
+
+// 7--------- 凑单品start -------
+.m_gsproduct {
+  background-color: #fff;
+
+  .top_nav {
+    position: relative;
+    background-color: #fff;
+
+    .gsnav {
+    padding-right: 70rem/@base;
+    position: relative;
+    border-bottom: 1rem/@base solid #ccc;
+
+    .selectthis {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 70rem/@base;
+      height: 75rem/@base;
+      border-left: 1rem/@base solid #ccc;
+    }
+
+    .from {
+
+      li {
+        width: 30%;
+        float: left;
+        height: 75rem/@base;
+        line-height: 75rem/@base;
+        text-align: center;
+        .font_dpr(14px);
+      }
+    }
+  }
+
+    .item_info {
+      position: absolute;
+      top: 75/@base;
+      left: 0;
+      width: 100%;
+      li {
+        position: relative;
+        height: 80rem/@base;
+        line-height: 80rem/@base;
+        .font_dpr(14px);
+        border-bottom: 1rem/@base solid #ccc;
+        text-indent: 10rem/@base;
+      }
+    }
+    .mall {
+      display: none;
+      box-shadow: 0 0 9rem/@base #ccc;
+      background-color: #fff;
+    }
+    .addr {
+      display: none;
+      box-shadow: 0 0 9rem/@base #ccc;
+      background-color: #fff;
+    }
+  }
+
+
+  .right:after {
+    content: '';
+    position: absolute;
+    top: 12rem/@base;
+    right: 10rem/@base;
+    width: 48rem/@base;
+    height: 48rem/@base;
+    background: url(../images/on.png) no-repeat;
+    background-size: 48rem/@base 48rem/@base;
+  }
+
+  .gsprolist {
+    ul {
+      background-color: #F1F1F1;
+      padding: 8rem/@base;
+    }
+    li {
+      float: left;
+      width: 50%;
+      padding: 7rem/@base;
+      a {
+        display: block;
+        background-color: #fff;
+        padding: 10rem/@base;
+        img{
+          width: 330rem/@base;
+          height: 320rem/@base;
+        }
+        .gstitle {
+          .font_dpr(14px);
+        }
+        .price {
+          margin-top: 10rem/@base;
+          height: 60rem/@base;
+          line-height: 60rem/@base;
+          span {
+            color:#F63D05;
+            .font_dpr(18px);
+          }
+          button {
+            border: none;
+            color: #fff;
+            background-color: #FFA934;
+            border-radius: 5rem/@base;
+            width: 130rem/@base;
+            height:100%;
+            float: right;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+// 7--------- 凑单品end -------

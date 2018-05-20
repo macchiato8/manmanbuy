@@ -2,8 +2,8 @@
 
 function Api(){
   /* 自己本地IP加上项目端口号 */
-  // this.base = 'http://192.168.45.23:9999';
-  this.base = 'http://192.168.1.107:9999';
+  // this.base = 'http://192.168.45.41:9999';
+  this.base = 'http://192.168.1.109:9999';
   
   /*首页接口地址管理*/
   this.getindexmenu = this.base + '/api/getindexmenu';
@@ -27,6 +27,35 @@ function Api(){
   this.getproduct = this.base + '/api/getproduct';
   //获取商品评论
   this.getproductcom = this.base + '/api/getproductcom';
+  
+  /*国内折扣*/
+  //国内折扣商品列表
+  this.getinlanddiscount = this.base + '/api/getinlanddiscount';
+  //国内折扣商品详情展示
+  this.getdiscountproduct = this.base + '/api/getdiscountproduct';
+
+  /*白菜价*/
+  //白菜价标题列表
+  this.getbaicaijiatitle = this.base + '/api/getbaicaijiatitle';
+  //白菜价商品列表
+  this.getbaicaijiaproduct = this.base + '/api/getbaicaijiaproduct';
+  
+  
+  
+  /*优惠券*/
+  //优惠券标题列表
+  this.getcoupon = this.base + '/api/getcoupon';
+  //优惠券详情列表
+  this.getcouponproduct = this.base + '/api/getcouponproduct';
+  
+  
+  /*凑单品*/
+  //店铺数据
+  this.getgsshop = this.base + '/api/getgsshop';
+  //华北数据
+  this.getgsshoparea = this.base + '/api/getgsshoparea';
+  //商品列表数据
+  this.getgsproduct = this.base + '/api/getgsproduct';
   
   
   

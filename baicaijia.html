@@ -3,8 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <title>白菜价</title>
+  <script src="lib/lib-flexible/flexible.js"></script>
+  <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
+<!--部分分页公共头部-->
+<div class="m_header">
+  <div class="leftarrow fl">
+    <a href="#"><img src="images/icback.svg" alt=""></a>
+  </div>
+  <h4>国内折扣</h4>
+  <div class="download fr">
+    <a href="#"><img src="images/header_app.png" alt=""></a>
+  </div>
+</div>
+
+<!--横向滚动导航-->
+<div class="m_baicai">
+  <div class="scrollnav" id="wrapper">
+    <ul class="clearfix">
+    <!--模版-->
+    </ul>
+  </div>
+  <div class="baiprolist">
+    <ul>
+      <!--模版-->
+    </ul>
+  </div>
+</div>
+
+
+<!--底部-->
+<div class="footer">
+  <div class="user clearfix">
+    <a href="#">登录</a>
+    <a href="#">注册</a>
+    <a href="#" class="returnTop fr"><img src="images/top.jpg" alt="">返回顶部</a>
+  </div>
+  <div class="mlink">
+    <p class="clearfix">
+      <a href="#">手机APP下载</a>
+      <a href="#">慢慢买手机版</a>
+      <a href="#">--掌上比价平台</a>
+    </p>
+    <p><a href="#">m.manmanbuy.com</a></p>
+  </div>
+</div>
+
+
+<script type="text/html" id="baiprolistTpl">
+  {{ each result v i }}
+  <li>
+    <a href="#">
+      <div class="item_left">
+        {{# v.productImg}}
+      </div>
+      <div class="item_right">
+        <h3 class="txt-cut">{{# v.productName}}</h3>
+        <p class="price">{{# v.productPrice}}</p>
+        {{# v.productCouponRemain}}
+        <p class="seal">{{# v.productCoupon}} {{# v.productHref}}</p>
+      </div>
+    </a>
+  </li>
+  {{ /each }}
+</script>
+<script type="text/html" id="scrollnavTpl">
+  {{ each result v i}}
+  <li><a class="{{ i==0? 'current' : ''}}" data-titleid="{{v.titleId}}" href="javascript:;">{{v.title}}</a></li>
+  {{ /each }}
+</script>
+
+<script src="lib/jquery/jquery-1.12.4.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="lib/iscroll/iscroll.js"></script>
+<script src="js/common.js"></script>
+<script src="js/baicaijia.js"></script>
 </body>
 </html>

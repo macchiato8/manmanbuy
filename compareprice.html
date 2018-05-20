@@ -8,10 +8,114 @@
 </head>
 <body>
 
+<!--头部-->
+<div class="header">
+  <div class="logo fl">
+    <a href="#"><img src="images/header_logo.png" alt=""></a>
+  </div>
+  <div class="download fr">
+    <a href="#"><img src="images/header_app.png" alt=""></a>
+  </div>
+</div>
+
+<!--搜索框-->
+<div class="search">
+  <input type="search" placeholder="请输入您想比价的商品名">
+  <button>搜索</button>
+</div>
+
+<!--商品详情公共导航条-->
+<div class="mdaohang">
+  <ul>
+    <a href="index.html">首页 > </a>
+    <a href="#"> </a>
+    <a class="goto" href="javascript:;"></a>
+  </ul>
+</div>
+
+
+<!--产品详情-->
+<div class="prodetails">
+
+</div>
+
+<!--比价小导航条-->
+<div class="comparenav">
+  <ul class="clearfix">
+    <li class='current'><a href="javascript:;">比价购买</a></li>
+    <li><a href="javascript:;">产品参数</a></li>
+    <li><a href="javascript:;">优选评价</a></li>
+  </ul>
+</div>
+
+<!-- 商城比价 -->
+<div class="bjshop">
+  <div class="bjshopinfo"></div>
+</div>
+
+
+<!--评价-->
+<div class="compareCom">
+  <h3>网友评价</h3>
+  <ul>
+  </ul>
+</div>
+
+
+<!--评价模版引擎-->
+<script type="text/html" id="compareComTpl">
+  {{each result v i}}
+  <li>
+    <div class="info clearfix">
+      <span class="name fl">{{v.comName}}</span>
+      <span class="date fr">{{v.comTime}}</span>
+      <span class="from fr">{{v.comFrom}}</span>
+    </div>
+    <div class="text">{{ v.comContent }}</div>
+  </li>
+  {{/each}}
+</script>
+</div>
+
+
+<!--查看更多评价-->
+<div class="moresale">
+  <a href="javascript:;"><button>查看更多评论 >></button></a>
+</div>
+
+<!--底部-->
+<div class="footer">
+  <div class="user clearfix">
+    <a href="#">登录</a>
+    <a href="#">注册</a>
+    <a href="#" class="returnTop fr"><img src="images/top.jpg" alt="">返回顶部</a>
+  </div>
+  <div class="mlink">
+    <p class="clearfix">
+      <a href="#">手机APP下载</a>
+      <a href="#">慢慢买手机版</a>
+      <a href="#">--掌上比价平台</a>
+    </p>
+    <p><a href="#">m.manmanbuy.com</a></p>
+  </div>
+</div>
+
+
+
+<!--产品详情模版-->
+<script type="text/html" id="prodetailsTpl">
+  {{ each result v i }}
+  <div class="proImg">
+    {{# v.productImg }}
+  </div>
+  <p class="protitle">{{ v.productName }}</p>
+  {{ /each }}
+</script>
 
 
 <script src="lib/jquery/jquery-1.12.4.js"></script>
 <script src="lib/artTemplate/template-web.js"></script>
 <script src="js/common.js"></script>
+<script src="js/compareprice.js"></script>
 </body>
 </html>

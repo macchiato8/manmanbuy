@@ -3,8 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <title>优惠券</title>
+  <script src="lib/lib-flexible/flexible.js"></script>
+  <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
+<!--部分分页公共头部-->
+<div class="m_header">
+  <div class="leftarrow fl">
+    <a href="#"><img src="images/icback.svg" alt=""></a>
+  </div>
+  <h4>优惠券</h4>
+  <div class="download fr">
+    <a href="#"><img src="images/header_app.png" alt=""></a>
+  </div>
+</div>
+
+
+<!--优惠券列表-->
+<div class="m_coupon">
+  <ul class="clearfix">
+    <!--模版-->
+  </ul>
+</div>
+
+<!--底部-->
+<div class="footer">
+  <div class="user clearfix">
+    <a href="#">登录</a>
+    <a href="#">注册</a>
+    <a href="#" class="returnTop fr"><img src="images/top.jpg" alt="">返回顶部</a>
+  </div>
+  <div class="mlink">
+    <p class="clearfix">
+      <a href="#">手机APP下载</a>
+      <a href="#">慢慢买手机版</a>
+      <a href="#">--掌上比价平台</a>
+    </p>
+    <p><a href="#">m.manmanbuy.com</a></p>
+  </div>
+</div>
+
+<script type="text/html" id="couponTpl">
+  {{ each result v i }}
+  <li>
+    <a href="couponproduct.html?couponId={{ v.couponId }}">
+      <img src="{{ v.couponImg }}" alt="" class="imgfont">
+      <p>{{ v.couponTitle }}</p>
+    </a>
+  </li>
+  {{ /each }}
+</script>
+
+<script src="lib/jquery/jquery-1.12.4.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/common.js"></script>
+<script src="js/coupon.js"></script>
 </body>
 </html>
